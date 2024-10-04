@@ -78,20 +78,52 @@ h1{
     align-items: center;
     flex-direction: column;
 }
+#fotitas{
+    background-color: rgb(219, 219, 219);
+}
+#tabelita{
+    background-color: rgb(255, 177, 75);
+}
+body{
+    background-color: rgb(255, 177, 75);
+}
+#tabelita main{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: rgb(255, 177, 75);
+}
 .passeio{
+    background-color: rgb(219, 219, 219);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-main{
-    background-color: rgb(230, 230, 230);
+.valores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.foto{
+.foto:hover + .foto-btn,
+.foto2:hover + .foto-btn2,
+.foto3:hover + .foto-btn3 {
+    transform: scale(1.1); /* Aumenta o botão */
+}
+.foto,
+.foto2,
+.foto3 {
     width: 314px;
     height: 368px;
-    border: 2PX solid gray;
+    border: 2px solid grey;
     padding: 2px;
     box-sizing: border-box;
+    transition: transform 0.3s ease
+}
+.foto:hover,
+.foto2:hover,
+.foto3:hover {
+    transform: scale(1.1);
 }
 .galeria{
     display: flex;
@@ -100,7 +132,9 @@ main{
     gap: 50px;
     padding: 160px;
 }
-.foto-btn{
+.foto-btn,
+.foto-btn2,
+.foto-btn3{
     background-color: #C95E10;
     color: white;
     border: none;
@@ -110,7 +144,49 @@ main{
     cursor: pointer;
     width: 314px;
     box-sizing: border-box;
+    transition: transform 0.3s
+
 }
-.foto-btn:hover{
+.foto-btn:hover,
+.foto-btn2:hover,
+.foto-btn3:hover{
     color: black;
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(red, green, blue);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    width: 30%;
+
+    table-layout: fixed;
+}
+
+thead{
+    background-color: gray;
+}
+th, td{
+    border: 1px outset;
+    padding: 8px 10px ;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;;
+}
+tbody{
+    background-color: rgb(229, 247, 247);
+}
+tfoot{
+    background-color: rgb(229, 247, 247);
+    text-align: center;
+}
+.zap{
+    background-color: #C95E10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 10px 10px;
+    align-items: center;
 }
